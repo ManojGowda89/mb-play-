@@ -17,7 +17,6 @@ const {setLogin,isLogin}=useStore()
         setLogin(false)
         localStorage.clear();
 
-        // Navigate to the login page
         navigate("/login");
       } catch (error) {
         console.error("Error during logout:", error);
@@ -30,7 +29,7 @@ const {setLogin,isLogin}=useStore()
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Video Gallery
           </Typography>
-        {isLogin?  <Button color="inherit" onClick={handleLogout}>
+        {isLogin?  <Button color="inherit" onClick={()=>window.location.reload()}>
             Logout
           </Button> :
          <Button

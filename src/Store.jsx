@@ -20,6 +20,7 @@ export function Provider({ children }) {
   const [isAdmin, SetAdmin] = useState(
     localStorage.getItem("isAdmin") || false
   );
+  console.log(isAdmin)
 
 const [isLogin,setLogin] = useState(localStorage.getItem("isLogin") || false)
   useEffect(() => {

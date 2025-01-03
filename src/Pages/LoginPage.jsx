@@ -6,7 +6,7 @@ import Layout from './Comp/Layout';
 import { useStore } from "../Store";
 const LoginPage = () => {
 
-  const {setLogin,setAdmin}  =useStore()
+  const {setLogin,SetAdmin}  =useStore()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -23,7 +23,7 @@ const LoginPage = () => {
 
       if (response) {
         setLogin(true)
-        setAdmin(response.data.isAdmin)
+        SetAdmin(response.data.isAdmin)
         navigate('/');
       }
     } catch (err) {
