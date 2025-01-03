@@ -49,7 +49,7 @@ export default function Home() {
   const fetchVideos = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/videos",{
+      const response = await axios.get("https://mb-paly-server.onrender.com/videos",{
         withCredentials:true
       });
       if (response.data.videos) {
@@ -97,7 +97,7 @@ export default function Home() {
       };
 
       // Save video data to your backend (e.g., MongoDB or your custom database)
-      await axios.post("http://localhost:5000/videos", videoData,{
+      await axios.post("https://mb-paly-server.onrender.com/videos", videoData,{
         withCredentials:true
       });
 
@@ -155,7 +155,7 @@ export default function Home() {
       await deleteObject(thumbnailRef);
 
       // Then, delete from the server
-      await axios.delete(`http://localhost:5000/videos/${videoId}`,{
+      await axios.delete(`https://mb-paly-server.onrender.com/videos/${videoId}`,{
         withCredentials:true
       });
 

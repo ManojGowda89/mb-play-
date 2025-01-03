@@ -26,7 +26,7 @@ const [isLogin,setLogin] = useState(localStorage.getItem("isLogin") || false)
   
     const fetchState = async () => {
         try {
-          const response = await axios.get("http://localhost:5000/state", {
+          const response = await axios.get("https://mb-paly-server.onrender.com/state", {
             withCredentials: true,
           });
           if (response) {

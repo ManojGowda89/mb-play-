@@ -10,7 +10,7 @@ const {setLogin,isLogin}=useStore()
     const handleLogout = async () => {
       try {
         // Call the logout API using Axios
-        await axios.get("http://localhost:5000/logout",{
+        await axios.get("https://mb-paly-server.onrender.com/logout",{
             withCredentials: true,
         });
 
